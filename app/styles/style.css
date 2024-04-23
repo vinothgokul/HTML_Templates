@@ -1,0 +1,397 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+
+:is(a, a:hover) {
+  text-decoration: none;
+}
+
+:is(h1, h2, h3, h4, h5, h6, p) {
+  margin: 12px 0;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h4 {
+  font-weight: lighter;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  padding: 12px 8px;
+  border: 1px solid #d3d3d3;
+  min-width: 120px;
+}
+
+button {
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 0;
+  min-width: 80px;
+  &:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+  }
+}
+
+img {
+  object-fit: cover;
+  max-width: 100%;
+}
+
+figure {
+  & > div {
+    padding: 12px 24px;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #fff;
+  padding: 8px 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  letter-spacing: 5px;
+
+  & a {
+    display: block;
+    padding: 8px 16px;
+    color: #000;
+    &:hover {
+      background-color: #d3d3d3;
+      color: #000;
+    }
+  }
+
+  &.band {
+    background-color: #000;
+    letter-spacing: 0;
+    padding: 0;
+    & a {
+      color: #fff;
+      padding: 12px 24px;
+    }
+  }
+
+  &.catering {
+    font-size: small;
+    position: fixed;
+    width: 100%;
+  }
+}
+
+.home {
+  margin: 0 auto;
+  padding: 0;
+
+  & figcaption {
+    bottom: 0;
+    padding: 12px 24px;
+  }
+}
+
+.catering {
+  :is(h1, h2, h3, h4, h5, h6) {
+    letter-spacing: 5px;
+    font-weight: 400;
+  }
+
+  & .home {
+    max-width: 1600px;
+    padding: 0;
+    & img {
+      border-radius: 0;
+      opacity: 1;
+    }
+  }
+
+  & article {
+    max-width: 1100px;
+    padding: 64px 0;
+
+    & img {
+      opacity: 0.75;
+      border-radius: 4px;
+    }
+
+    & + article {
+      border-bottom: 1px solid #f1f1f1;
+      & > div,
+      figcaption {
+        padding: 12px 24px;
+      }
+    }
+  }
+
+  & form {
+    & input {
+      border: 0;
+      border-bottom: 1px solid #ccc;
+    }
+  }
+}
+
+.band {
+  & .home {
+    & h1 {
+      font-size: 24px;
+    }
+    & figcaption {
+      bottom: 40px;
+    }
+    padding: 0;
+  }
+
+  & .card {
+    margin-bottom: 16px;
+    & img {
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    & figcaption {
+      padding: 0 16px;
+    }
+  }
+
+  & article {
+    & > div {
+      padding: 64px 16px;
+      max-width: 800px;
+    }
+    & ul {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.card {
+  & img {
+    width: 100%;
+  }
+}
+
+.bands {
+  display: flex;
+  & figure {
+    flex-grow: 1;
+  }
+
+  & figcaption {
+    margin: 12px 0;
+  }
+
+  & img {
+    border-radius: 4px;
+    width: 60%;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  & p {
+    color: #757575;
+    font-size: small;
+  }
+}
+
+article {
+  margin: 0 auto;
+
+  & > div {
+    margin: 0 auto;
+
+    & > div {
+      margin: 32px 0;
+    }
+  }
+}
+
+footer {
+  padding: 64px 16px;
+  & .footer-text {
+    text-decoration: underline;
+    color: inherit;
+    &:hover {
+      color: #4caf50;
+    }
+  }
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.search:hover {
+  background-color: #f00;
+}
+
+.hamburger-icon:hover {
+  background-image: url(images/icons/hamburger-dark.png);
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  & img {
+    border-radius: 0;
+  }
+}
+
+.templates {
+  min-height: 80vh;
+  .card {
+    height: 400px;
+    width: 400px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    & p {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+}
+
+.tickets {
+  text-align: left;
+  background-color: #fff;
+  color: #808080;
+  & li {
+    padding: 10px 16px;
+    & + li {
+      border-top: 1px solid #d3d3d3;
+    }
+  }
+}
+
+.contact {
+  & ul {
+    width: 50%;
+  }
+  & form {
+    width: 50%;
+  }
+}
+
+.hamburger-icon {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .catering {
+    & nav {
+      display: none;
+    }
+    & .about-image {
+      display: none;
+    }
+  }
+
+  header {
+    &.band {
+      & li + li {
+        display: none;
+      }
+      & .search-icon {
+        display: none;
+      }
+      & .search:hover {
+        background-color: #d3d3d3;
+      }
+    }
+  }
+
+  .hamburger-icon {
+    display: block;
+  }
+
+  .band {
+    & .home {
+      & figcaption {
+        display: none;
+      }
+    }
+    & .contact {
+      & > div {
+        display: block;
+      }
+
+      & form {
+        width: 100%;
+        & div {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+
+  .bands {
+    display: block;
+  }
+
+  .cards {
+    display: block;
+  }
+}
+
+@media (max-width: 1000px) {
+  .catering {
+    & .menu {
+      & figure {
+        flex-direction: column;
+        & img {
+          width: 100%;
+        }
+      }
+    }
+
+    & .about {
+      & p + p {
+        display: none;
+      }
+    }
+  }
+}
